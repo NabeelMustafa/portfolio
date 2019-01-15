@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'New Blog', new_portfolio_path %>
 
 <h1>Portfolio Items</h1>
 <% @portfolio_items.each do |item| %>
-  <p><%= item.title %></p>
+  <p><%= item.title %><%= link_to 'Edit', edit_portfolio_path(item) %></p>
   <p><%= item.body %></p>
   <p><%= item.subtitle %></p>
   <img src="<%= "#{item.thumbnail_image}"%>">
 <% end %>
+
