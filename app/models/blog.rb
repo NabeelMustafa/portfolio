@@ -1,6 +1,5 @@
 class Blog < ApplicationRecord
-  enum status: { darft:0, publish:1}
+  enum status: { draft:0, publish:1}
   extend FriendlyId
   friendly_id :title, use: :slugged
 end
- 
