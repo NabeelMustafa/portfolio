@@ -5,6 +5,7 @@
 <h1>Portfolio Items</h1>
 <% @portfolio_items.each do |item| %>
   <p><%= item.title %><%= link_to 'Edit', edit_portfolio_path(item) %></p>
+  <%= link_to 'Show', item %>
   <p><%= item.body %></p>
   <p><%= item.subtitle %></p>
   <img src="<%= "#{item.thumbnail_image}"%>">
