@@ -6,19 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+5.times do |topic|
+  Topic.create!(
+           title: topic
+  )
+end
+puts '5 topics created'
 10.times do |blog|
   Blog.create!(
           title: "Blog no #{blog+1}",
-          body: "sjfasdsda;das salknasnfdlasnflasflnxcvkcvxcvcxvjcxv xcjvnxcvnxcljv  ocxvncxnvcxvncxvsdsvcx"
+          body: "sjfasdsda;das salknasnfdlasnflasflnxcvkcvxcvcxvjcxv xcjvnxcvnxcljv  ocxvncxnvcxvncxvsdsvcx",
+          topic_id: Topic.last.id
   )
 end
 
+puts '10 blog created'
 5.times do |skill|
   Skill.create!(
       title: "Skill no#{skill+1}",
       percent: 15+skill
   )
 end
+
+puts '5 skill created'
 
 7.times do |p_item|
   Portfolio.create!(
@@ -29,3 +39,6 @@ end
       thumbnail_image: "http://placehold.it/350x200"
   )
 end
+
+
+puts '7 portfolio items created'
