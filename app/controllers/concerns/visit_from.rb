@@ -6,6 +6,10 @@ module VisitFrom
   end
 
   def set_source
-    session[:source] = params[:q] if params[:q]
+    if params[:q]
+      session[:source] = params[:q]
+    else
+      session[:source] = nil
+    end
   end
 end
