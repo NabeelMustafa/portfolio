@@ -1,4 +1,4 @@
-<h1>Welcome! <%= " #{current_user.first_name}" if current_user %></h1>
+<h1>Welcome! <%= " #{current_user.first_name}" %></h1>
 
 <h2>Blog post</h2>
 <p><%= @blogs.inspect %></p>
@@ -6,3 +6,8 @@
 <h2>Skill</h2>
 <p><%= @skill.inspect %></p>
 
+<hr>
+
+<% if session[:source] %>
+  <p>Thanks for visiting from <%= session[:source]  %></p>
+<% end %>
