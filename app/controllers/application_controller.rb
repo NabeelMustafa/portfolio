@@ -3,4 +3,5 @@ class ApplicationController < ActionController::Base
   include DeviseWhitelist
   include VisitFrom
   include CurrenUserConcern
+  include SetPageDefaults
 end
