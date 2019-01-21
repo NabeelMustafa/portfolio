@@ -3,13 +3,4 @@
 <%= link_to 'Add new portfolio item', new_portfolio_path %>
 
 <h1>Portfolio Items</h1>
-<% @portfolio_items.each do |item| %>
-  <p><%= item.title %></p>
-  <%= link_to 'Show', item %>
-  <%= link_to 'Edit', edit_portfolio_path(item) %>
-  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  <p><%= item.body %></p>
-  <p><%= item.subtitle %></p>
-  <img src="<%= "#{item.thumbnail_image}"%>">
-<% end %>
-
+<%= render @portfolio_items%>
