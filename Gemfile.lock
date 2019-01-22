@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/NabeelMustafa/Nabeel_gem
+  revision: bdc359a6de99bd3c99954edfc794ef33f7793b89
+  specs:
+    Nabeel_gem (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -204,6 +210,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  Nabeel_gem!
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.2.1)
   byebug

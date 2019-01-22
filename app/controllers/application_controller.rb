@@ -4,4 +4,11 @@ class ApplicationController < ActionController::Base
   include VisitFrom
   include CurrenUserConcern
   include SetPageDefaults
+
+  before_action :set_copyright
+
+  def set_copyright
+    @copy = NabeelCopyRight::Renderer.copyright 'Nabeel Mustafa', 'All right reserved'
+  end
+
 end
