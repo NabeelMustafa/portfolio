@@ -36,7 +36,6 @@ class PortfoliosController < ApplicationController
   def update
     @portfolio_item = Portfolio.find(params[:id])
     respond_to do |format|
-      byebug
       if @portfolio_item.update(portfolio_params)
         format.html { redirect_to :portfolios, notice: 'Item was successfully updated.' }
       else
