@@ -1,6 +1,8 @@
 class PortfoliosController < ApplicationController
 
   layout "portfolio"
+  access all: [:show, :index], user: { except: [:destroy, :new, :create, :upadte, :edit]}, site_admin: :all
+
   def index
     @portfolio_items = Portfolio.all
   end
@@ -34,6 +36,7 @@ class PortfoliosController < ApplicationController
   def update
     @portfolio_item = Portfolio.find(params[:id])
     respond_to do |format|
+      byebug
       if @portfolio_item.update(portfolio_params)
         format.html { redirect_to :portfolios, notice: 'Item was successfully updated.' }
       else
@@ -51,6 +54,6 @@ class PortfoliosController < ApplicationController
     end
   end
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name, :id])
   end
 end
