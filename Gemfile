@@ -60,3 +60,6 @@ gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'Nabeel_gem', git: 'https://github.com/NabeelMustafa/Nabeel_gem'
 gem 'petergate', '~> 1.7'
+
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'

@@ -59,6 +59,9 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
+    bootstrap-sass (3.4.0)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (10.0.2)
     coffee-rails (4.2.2)
@@ -79,6 +82,8 @@ GEM
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.9.25)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.4.2)
@@ -215,9 +220,11 @@ DEPENDENCIES
   Nabeel_gem!
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.2.1)
+  bootstrap-sass
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.2)
+  font-awesome-rails
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.3)
