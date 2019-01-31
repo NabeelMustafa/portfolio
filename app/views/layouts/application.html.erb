@@ -10,8 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'false' %>
+
+    <%= stylesheet_link_tag    'application', media: "all"%>
+    <%= javascript_include_tag 'application'%>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
     <style>
       /* note: this is a hack for ios iframe for bootstrap themes shopify page */
@@ -37,10 +38,10 @@
 
   <%#= source_helper("application") %>
   <%#= @copy %>
-  <script>
-      // execute/clear BS loaders for docs
-      $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
-  </script>
+<!--  <script>-->
+<!--      // execute/clear BS loaders for docs-->
+<!--      $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})-->
+<!--  </script>-->
   </body>
 </html>
 
