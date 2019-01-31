@@ -15,7 +15,11 @@ puts '5 topics created'
 10.times do |blog|
   Blog.create!(
           title: "Blog no #{blog+1}",
-          body: "sjfasdsda;das salknasnfdlasnflasflnxcvkcvxcvcxvjcxv xcjvnxcvnxcljv  ocxvncxnvcxvncxvsdsvcx",
+          body: "Donec id elit non mi porta gravida at eget metus.
+                  Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                   Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit",
           topic_id: Topic.last.id
   )
 end
