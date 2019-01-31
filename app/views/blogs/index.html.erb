@@ -317,6 +317,7 @@
 <!--        </div>-->
 <!--      </div>-->
 
+
     </div>
 
     <div class="fm">
@@ -325,6 +326,11 @@
           <h4 class="aeh">My blog</h4>
         </li>
         <%= render @blogs.order(created_at: :desc) %>
+        <br/>
+        <li class="b agz">
+          <%= paginate @blogs %>
+        </li>
+
       </ul>
     </div>
     <div class="fj">
@@ -411,6 +417,7 @@
       </div>
     </div>
   </div>
+  <a class="docs-top" style="" href="#">Back to top</a>
 </div>
 
 
