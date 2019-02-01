@@ -372,10 +372,6 @@
             <div>
               <img data-width="640" data-height="640" data-action="zoom" src=<%= asset_path "instagram_9.jpg" %>>
             </div>
-
-            <div>
-              <img data-width="640" data-height="640" data-action="zoom" src=<%= asset_path "instagram_10.jpg" %>>
-            </div>
           </div>
         </div>
       </div>
@@ -385,142 +381,52 @@
 
       <ul class="ca bow box afo">
 
+<!--        <li class="rv b agz">-->
+<!--          <div class="input-group">-->
+<!--            <input type="text" class="form-control" placeholder="Message">-->
+<!--            <div class="bpt">-->
+<!--              <button type="button" class="cg ns yf">-->
+<!--                <span class="h bao"></span>-->
+<!--              </button>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </li>-->
+
         <li class="rv b agz">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Message">
+<!--            <input type="text" class="form-control" placeholder="Message">-->
             <div class="bpt">
-              <button type="button" class="cg ns yf">
-                <span class="h bao"></span>
-              </button>
+              <h3>Portfolio</h3>
             </div>
           </div>
         </li>
 
-        <li class="rv b agz">
-          <img
-            class="bos vb yb aff"
-            src= <%= asset_path "avatar-dhg.png"%>>
-          <div class="rw">
-            <div class="bpb">
-              <small class="acx axc">4 min</small>
-              <h6>Dave Gamache</h6>
-            </div>
+        <%= render @portfolio_items%>
 
-            <p>
-              Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
 
-            <div class="boy" data-grid="images">
-              <div style="display: none">
-                <img data-action="zoom" data-width="1050" data-height="700" src=<%= asset_path "unsplash_1.jpg" %>>
-              </div>
-
-              <div style="display: none">
-                <img data-action="zoom" data-width="640" data-height="640" src= <%= asset_path "instagram_1.jpg"  %>>
-              </div>
-
-              <div style="display: none">
-                <img data-action="zoom" data-width="640" data-height="640" src=<%= asset_path "instagram_13.jpg"  %>>
-              </div>
-
-              <div style="display: none">
-                <img data-action="zoom" data-width="1048" data-height="700" src=<%= asset_path "unsplash_2.jpg"  %>>
-              </div>
-            </div>
-
-            <ul class="bow afa">
-              <li class="rv afh">
-                <img
-                  class="bos vb yb aff"
-                  src=<%= asset_path "avatar-fat.jpg"%>>
-                <div class="rw">
-                  <strong>Jacon Thornton: </strong>
-                  Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-                </div>
-              </li>
-              <li class="rv">
-                <img
-                  class="bos vb yb aff"
-                  src=<%= asset_path "avatar-mdo.png" %>>
-                <div class="rw">
-                  <strong>Mark Otto: </strong>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="rv b agz">
-          <img
-            class="bos vb yb aff"
-            src=<%= asset_path "avatar-fat.jpg"%>>
-          <div class="rw">
-            <div class="bpd">
-              <div class="bpb">
-                <small class="acx axc">12 min</small>
-                <h6>Jacob Thornton</h6>
-              </div>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-          </div>
-        </li>
-
-        <li class="rv b agz">
-          <img
-            class="bos vb yb aff"
-            src=<%= asset_path "avatar-mdo.png" %>>
-          <div class="rw">
-            <div class="bpb">
-              <small class="acx axc">34 min</small>
-              <h6>Mark Otto</h6>
-            </div>
-
-            <p>
-              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-
-            <div class="boy" data-grid="images">
-              <img style="display: none" data-width="640" data-height="640" data-action="zoom" src=<%= asset_path "instagram_3.jpg" %>>
-            </div>
-
-            <ul class="bow">
-              <li class="rv">
-                <img
-                  class="bos vb yb aff"
-                  src=<%= asset_path "avatar-dhg.png"%>>
-                <div class="rw">
-                  <strong>Dave Gamache: </strong>
-                  Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
       </ul>
     </div>
     <div class="fj">
-      <div class="alert ro alert-dismissible d-none vy" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <a class="rj" href="profile/index.html">Visit your profile!</a> Check your self, you aren't looking well.
-      </div>
+<!--      <div class="alert ro alert-dismissible d-none vy" role="alert">-->
+<!--        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--        <a class="rj" href="profile/index.html">Visit your profile!</a> Check your self, you aren't looking well.-->
+<!--      </div>-->
 
       <div class="pz afo d-none vy">
         <div class="qa">
-          <h6 class="afh">Sponsored</h6>
+          <h6 class="afh">Recent Blog post</h6>
           <div data-grid="images" data-target-height="150">
             <img class="bos" data-width="640" data-height="640" data-action="zoom" src=<%= asset_path "instagram_2.jpg" %>>
           </div>
-          <p><strong>It might be time to visit Iceland.</strong> Iceland is so chill, and everything looks cool here. Also, we heard the people are pretty nice. What are you waiting for?</p>
-          <button class="cg nz ok">Buy a ticket</button>
+          <strong><%= @blog.title %></strong>
+          <p><%= @body %>  </p>
+          <%= link_to 'Read more', @blog, class: "cg nz ok" %>
         </div>
       </div>
 
       <div class="pz afo d-none vy">
         <div class="qa">
-          <h6 class="afh">Likes <small>· <a href="#">View All</a></small></h6>
+          <h6 class="afh">Follow me <small> </small></h6>
           <ul class="bow box">
             <li class="rv afa">
               <img

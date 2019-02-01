@@ -5,6 +5,8 @@ class PortfoliosController < ApplicationController
 
   def index
     @portfolio_items = Portfolio.all
+    @blog = Blog.order(created_at: :asc).last
+    @body = @blog.body.split(" ").each_with_object("") {|x,ob| break ob unless (ob.length + " ".length + x.length <= 70);ob << (" " + x)}.strip
     @title = "Nabeel Mustafa | Portfolio"
   end
 
