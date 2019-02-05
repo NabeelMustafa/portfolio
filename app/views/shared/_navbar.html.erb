@@ -21,10 +21,10 @@
         <a class="pg" href= <%= portfolios_path %>>Portfolio</a>
       </li>
 
-      <li class="pi ">
-        <% if logged_in?(:site_admin) %>
-          <a class="pg" data-toggle="modal" href="#msgModal">Messages</a>
-        <% end %>
+<!--      <li class="pi ">-->
+        <%# if logged_in?(:site_admin) %>
+<!--          <a class="pg" data-toggle="modal" href="#msgModal">Messages</a>-->
+        <%# end %>
       <li class="pi <%=  active? blogs_path  %>">
         <a class="pg" href= <%= blogs_path%>>Blog</a>
       </li>
@@ -47,6 +47,11 @@
       <li class="pi">
         <% if logged_in?(:site_admin) %>
           <a class="g pg" href="notifications/index.html"><span class="h azy"></span></a>
+        <% end %>
+      </li>
+      <li class="pi">
+        <% if logged_in?(:site_admin) %>
+          <a class="g pg"data-toggle="modal" href="#msgModal"><span class="h baq"></span></a>
         <% end %>
       </li>
       <%= render "shared/#{login_helper}" %>

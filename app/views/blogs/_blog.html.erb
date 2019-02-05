@@ -16,7 +16,7 @@
   <div class="rw">
     <!--            <small class="acx axc">3 min</small>-->
     <div class="bpb">
-      <a href="#"><strong><%= blog.topic.title %></strong></a>
+      <a href="#">From Topic <strong><%= " "+blog.topic.title %></strong></a>
     </div>
 
     <div class="pz aew">
@@ -28,7 +28,8 @@
                 <small class="acx axc"><%= distance_of_time_in_words(blog.created_at, Time.now)+" "%>Ago</small>
                 <h6><%= blog.title %></h6>
               </div>
-              <%= blog.body %>>
+              <%= blog.body.split(" ").each_with_object("") {|x,ob| break ob unless (ob.length + " ".length + x.length <= 100);ob << (" " + x)}.strip %>
+              <%= link_to 'Show More', blog %>
             </div>
           </div>
         </div>
