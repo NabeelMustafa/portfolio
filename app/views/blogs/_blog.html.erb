@@ -1,9 +1,39 @@
-<tr>
-  <td><%= blog.title %></td>
-  <td><%= blog.body %></td>
-  <td><%= distance_of_time_in_words(blog.created_at, Time.now)%>Ago</td>
-  <td><%= link_to 'Show', blog %></td>
-  <td><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin) %></td>
-  <td><%= link_to blog.status, toogle_status_blog_path(blog) if logged_in?(:site_admin)%></td>
-  <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>
-</tr>
+<!--<tr>-->
+<!--  <td><%#= blog.title %></td>-->
+<!--  <td><%#= blog.body %></td>-->
+<!--  <td><%#= distance_of_time_in_words(blog.created_at, Time.now)%>Ago</td>-->
+<!--  <td><%#= link_to 'Show', blog %></td>-->
+<!--  <td><%#= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin) %></td>-->
+<!--  <td><%#= link_to blog.status, toogle_status_blog_path(blog) if logged_in?(:site_admin)%></td>-->
+<!--  <td><%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>-->
+<!--</tr>-->
+
+
+
+<li class="b rv agz">
+  <span class="h blx axc aey yb"></span>
+
+  <div class="rw">
+    <!--            <small class="acx axc">3 min</small>-->
+    <div class="bpb">
+      <a href="#">From Topic <strong><%= " "+blog.topic.title %></strong></a>
+    </div>
+
+    <div class="pz aew">
+      <div class="qa">
+        <div class="rv">
+          <div class="rw">
+            <div class="bpd">
+              <div class="bpb">
+                <small class="acx axc"><%= distance_of_time_in_words(blog.created_at, Time.now)+" "%>Ago</small>
+                <h6><%= blog.title %></h6>
+              </div>
+              <%= blog.body.split(" ").each_with_object("") {|x,ob| break ob unless (ob.length + " ".length + x.length <= 100);ob << (" " + x)}.strip %>
+              <%= link_to 'Show More', blog %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>

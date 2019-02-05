@@ -6,7 +6,7 @@ module SetPageDefaults
   end
 
   def set_defaults
-    @title = "Nabeel Mustafa | Portfolio"
+    @title = "Nabeel Mustafa | Home"
     @seo_keywords = "Nabeel Mustafa"
   end
 end
