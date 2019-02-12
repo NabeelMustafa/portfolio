@@ -381,16 +381,7 @@
 
       <ul class="ca bow box afo">
 
-<!--        <li class="rv b agz">-->
-<!--          <div class="input-group">-->
-<!--            <input type="text" class="form-control" placeholder="Message">-->
-<!--            <div class="bpt">-->
-<!--              <button type="button" class="cg ns yf">-->
-<!--                <span class="h bao"></span>-->
-<!--              </button>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </li>-->
+
 
         <li class="rv b agz">
           <div class="input-group">
@@ -401,6 +392,11 @@
           </div>
         </li>
 
+        <% if logged_in?(:site_admin) %>
+          <%#= render "portfolios/new" %>
+        <% end %>
+
+        </li>
         <%= render @portfolio_items%>
 
 

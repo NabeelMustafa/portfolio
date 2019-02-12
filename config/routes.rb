@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :portfolios
   get '/', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  get 'delete/:id', to: 'portfolio#destroy'
   resources :blogs do
     member do
       get :toogle_status
