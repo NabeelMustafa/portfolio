@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
   access all: [:show, :index], user: { except: [:destroy, :new, :create, :upadte, :edit]}, site_admin: :all
 
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.order(position: :asc)
     @blog = Blog.order(created_at: :asc).last
     @body = @blog.body.split(" ").each_with_object("") {|x,ob| break ob unless (ob.length + " ".length + x.length <= 70);ob << (" " + x)}.strip
     @title = "Nabeel Mustafa | Portfolio"
@@ -56,6 +56,6 @@ class PortfoliosController < ApplicationController
     end
   end
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name, :id])
+    params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, technologies_attributes: [:name, :id])
   end
 end

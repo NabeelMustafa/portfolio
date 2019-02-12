@@ -14,17 +14,24 @@
   <!--            src= <%#= asset_path "avatar-dhg.png"%>>-->
   <div class="rw">
     <div class="bpb">
-<!--      <small class="acx axc">4 min</small>-->
-      <h6><%= portfolio.title %></h6>
+      <% if logged_in?(:site_admin) %>
+        <small class="acx axc"><%= link_to '<span class="h bmi" style="margin: 2px;"></span>'.html_safe, portfolio, method: :delete, data: { confirm: 'Are you sure?' }  %>
+          </small>
+        <a href="<%= edit_portfolio_path(portfolio)  %>"><small class="acx axc"><span class="h bdn"></span></small></a>
+    <% end %>
+
+      <h4><%= portfolio.title %></h4>
     </div>
 
     <p>
       <%= portfolio.body %>
+      <br/>
+      <%= render 'portfolios/tech',  tech: portfolio.technologies %>
     </p>
 
     <div class="boy" data-grid="images">
       <div style="display: none">
-        <img data-action="zoom" data-width="1050" data-height="700" src=<%= asset_path portfolio.main_image %>>
+        <img data-action="zoom" data-width="1050" data-height="700" src=<%= portfolio.main_image %>>
       </div>
 
 <!--      <div style="display: none">-->

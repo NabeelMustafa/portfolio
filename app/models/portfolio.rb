@@ -3,6 +3,8 @@ class Portfolio < ApplicationRecord
   accepts_nested_attributes_for :technologies, reject_if: lambda { |attrs| attrs['name'].blank?}
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumbnail_image
+
+  mount_uploader :main_image, PortfolioUploader
   def self.Angular
     where(title: 'Angular')
   end
