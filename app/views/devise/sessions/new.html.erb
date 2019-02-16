@@ -1,26 +1,77 @@
-<h2>Log in</h2>
+<!--<h2>Log in</h2>-->
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<%#= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<!--  <div class="field">-->
+<!--    <%#= f.label :email %><br />-->
+    <%#= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+<!--    <%#= f.label :password %><br />-->
+    <%#= f.password_field :password, autocomplete: "current-password" %>
+<!--  </div>-->
+
+  <%# if devise_mapping.rememberable? -%>
+<!--    <div class="field">-->
+      <%#= f.check_box :remember_me %>
+      <%#= f.label :remember_me %>
+<!--    </div>-->
+  <%# end -%>
+
+<!--  <div class="actions">-->
+    <%#= f.submit "Log in" %>
+<!--  </div>-->
+<%# end %>
+
+<%#= render "devise/shared/links" %>
+
+
+<div class="do axz">
+  <div class="ayb">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "ahr avz j"}) do |f| %>
+      <a href="/" class="l afv">
+        <img src=<%= asset_path "brand.png" %> alt="brand">
+      </a>
+        <div class="mu">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email"%>
+        </div>
+
+        <div class="mu afh">
+          <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Password" %>
+        </div>
+
+      <%# if devise_mapping.rememberable? -%>
+<!--          <div class="mu">-->
+      <%#= f.check_box :remember_me , class: "form-control"%>
+      <%#= f.label :remember_me  %>
+<!--          </div>-->
+      <%# end -%>
+
+        <div class="afv">
+          <%= f.submit "Log in" , class: "cg nq"%>
+          <a class="cg ns" href="/register">Sign up</a>
+        </div>
+    <% end %>
+<!--    <form role="form" class="ahr avz j">-->
+
+<!--      <a href="../index.html" class="l afv">-->
+<!--        <img src="../assets/img/brand.png" alt="brand">-->
+<!--      </a>-->
+
+
+
+<!--      <div class="mu afh">-->
+<!--        <input type="password" class="form-control" placeholder="Password">-->
+<!--      </div>-->
+
+<!--      <div class="afv">-->
+<!--        <button class="cg nq">Log In</button>-->
+<!--        <button class="cg ns">Sign up</button>-->
+<!--      </div>-->
+
+<!--      <footer class="bqx">-->
+<!--        <a href="#" class="axc">Forgot password</a>-->
+<!--      </footer>-->
+<!--    </form>-->
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
