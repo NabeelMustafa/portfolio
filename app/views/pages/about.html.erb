@@ -224,45 +224,13 @@
 <div class="bon" id="app-growl"></div>
 <%= render "shared/navbar" %>
 
-<div class="boq" style="background-image: url( <%= asset_path "iceland.jpg" %>);">
-  <div class="by">
-    <div class="bor">
-<!--      <img class="us bos" src="../assets/img/avatar-dhg.png">-->
-      <%= image_tag "avatar-dhg.png", class: "us bos"%>
-      <h3 class="bou">Dave Gamache</h3>
-      <p class="bot">
-        I wish i was a little bit taller, wish i was a baller, wish i had a girl… also.
-      </p>
-    </div>
-  </div>
-
-  <nav class="bov">
-    <ul class="nav ph xm">
-      <li class="pi">
-        <span class="h blp">
-          <a class="pg active" href="/portfolios">View Portfolio</a>
-        </span>
-      </li>
-    </ul>
-  </nav>
-</div>
+<%= render 'about_detail', about: Profile.first%>
 
 <div class="by afl" data-grid="images">
-  <div>
-    <img data-width="640" data-height="400" data-action="zoom" src=<%= asset_path "instagram_5.jpg" %>>
-  </div>
-
-  <div>
-    <img data-width="640" data-height="640" data-action="zoom" src=<%= asset_path "instagram_6.jpg" %>>
-  </div>
-
-  <div>
-    <img data-width="640" data-height="640" data-action="zoom" src=<%= asset_path "instagram_7.jpg" %>>
-  </div>
-
-  <div>
-    <img data-width="640" data-height="640" data-action="zoom" src=<%= asset_path "instagram_8.jpg" %>>
-  </div>
+<!--  <div>-->
+<!--    <img data-width="640" data-height="400" data-action="zoom" src=<%#= Myimage.first.image%>>-->
+<!--  </div>-->
+  <%= render 'myimg', img:  Myimage.all %>
 
 </div>
 <%= render "shared/footer" %>

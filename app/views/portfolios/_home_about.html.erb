@@ -1,0 +1,47 @@
+<div class="pz bpi afo">
+  <div class="qf" style="background-image: url( <%=about.cover %>);"></div>
+  <div class="qa avz">
+    <a >
+      <%#= image_tag "avatar-dhg.png", class: "bpj" %>
+                  <img
+                    class="bpj"
+                    src=<%=about.dp %>>
+    </a>
+
+    <h6 class="qb">
+      <a class="boa" ><%= about.name %></a>
+    </h6>
+
+    <p class="afo"><%= about.des %></p>
+
+<!--    <ul class="bpk">-->
+<!--      <li class="bpl">-->
+<!--        <a href="#userModal" class="boa" data-toggle="modal">-->
+<!--          Friends-->
+<!--          <h6 class="aej">12M</h6>-->
+<!--        </a>-->
+<!--      </li>-->
+
+<!--      <li class="bpl">-->
+<!--        <a href="#userModal" class="boa" data-toggle="modal">-->
+<!--          Enemies-->
+<!--          <h6 class="aej">1</h6>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--    </ul>-->
+  </div>
+</div>
+
+
+<div class="pz vp vy afo">
+  <div class="qa">
+    <h6 class="afh">About <small>· <%= link_to 'Edit', edit_profile_path(about) if logged_in?(:site_admin)%></small></h6>
+    <ul class="dc axg">
+<!--      <li><span class="axc h ban aff"></span>Went to <a href="#">Oh, Canada</a>-->
+<!--      <li><span class="axc h bnc aff"></span>Became friends with <a href="#">Obama</a>-->
+      <li><span class="axc h bfa aff"></span>Works at <a href="#"><%= about.work %></a>
+      <li><span class="axc h bfq aff"></span>Lives in <a href="#"><%= about.loc %></a>
+      <li><span class="axc h bgz aff"></span>From <a href="#"><%= about.from %></a>
+    </ul>
+  </div>
+</div>

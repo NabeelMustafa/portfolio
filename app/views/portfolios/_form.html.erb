@@ -19,11 +19,16 @@
     <%= f.file_field :main_image %>
   </div>
 
+
+
   <ul>
     <%= f.fields_for :technologies do |technology| %>
-      <li><%= technology.label :name%></li>
-      <li><%= technology.text_field :name%></li>
+      <%= render 'technology_fields', f: technology%>
     <% end %>
+
+    <div>
+      <%= link_to_add_association 'Add new technologies', f, :technologies %>
+    </div>
   </ul>
 
   <div class="actions">

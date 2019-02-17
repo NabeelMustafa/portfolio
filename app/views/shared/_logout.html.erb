@@ -1,7 +1,7 @@
 <!--link_to "Logout", destroy_user_session_path, method: :delete-->
 <li class="pi afb">
   <button class="cg bpo bpp boi" data-toggle="popover">
-    <img class="us" src="<%= current_user.avatar %>">
+    <img class="us" src="<%= current_user.avatar if current_user.avatar? %>">
     <%#= image_tag , class: "us" %>
   </button>
 </li>
