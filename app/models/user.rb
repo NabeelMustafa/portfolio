@@ -13,7 +13,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates_presence_of :name
+  mount_uploader :avatar, AvatarUploader
+  validates_presence_of :name, :avatar
 
   def first_name
     self.name.split.first
