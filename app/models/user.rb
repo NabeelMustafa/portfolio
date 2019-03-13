@@ -16,6 +16,7 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
   validates_presence_of :name, :avatar
 
+  has_many  :comments, dependent: :destroy
   def first_name
     self.name.split.first
   end

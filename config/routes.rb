@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :myimages
   resources :profiles
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}, :controllers => {:sessions => "sessions"}
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   get '/', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'delete/:id', to: 'portfolio#destroy'
+  get '/blogs/topics/:topic', to: 'blogs#show_topic'
   resources :blogs do
     member do
       get :toogle_status

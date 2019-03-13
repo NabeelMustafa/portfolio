@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toogle_status]
   layout "blog"
 
-  access all: [:show, :index], user: { except: [:destroy, :new, :create, :upadte, :edit, :toogle_status]}, site_admin: :all
+  access all: [:show, :index, :show_topic], user: { except: [:destroy, :new, :create, :upadte, :edit, :toogle_status]}, site_admin: :all
 
   # GET /blogs
   # GET /blogs.json
@@ -14,6 +14,11 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+  end
+
+
+  def show_topic
+    @blogs = Blog.joins(:topic).where("topics.title = '#{params[:topic]}'").page(params[:page]).per(5)
   end
 
   # GET /blogs/new

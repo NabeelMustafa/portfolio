@@ -324,7 +324,7 @@
     <div class="fm">
       <ul class="ca bow box afa">
         <li class="b agz">
-          <h4 class="aeh">My blog</h4>
+<!--          <h4 class="aeh">My blog</h4>-->
         </li>
         <%= render @blogs.order(created_at: :desc) %>
         <br/>
@@ -336,66 +336,7 @@
     </div>
     <div class="fj">
 
-      <div class="pz afo d-none vy">
-        <div class="qa">
-          <h6 class="afh">Topics <small>· <a href="#">View All</a></small></h6>
-          <ul class="bow box">
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">Csdfsdfontents</a></strong>
-              </div>
-            </li>
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">sdfsdfgfgfdg</a></strong>
-              </div>
-            </li>
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">Congfgdgdfgfdgtents</a></strong>
-              </div>
-            </li>
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">fdgfgher</a></strong>
-              </div>
-            </li>
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">qwerwerwer</a></strong>
-              </div>
-            </li>
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">2313ewqe</a></strong>
-              </div>
-            </li>
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">342dsfe</a></strong>
-              </div>
-            </li>
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">ewr34rfcwre</a></strong>
-              </div>
-            </li>
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">sdfsdf4534</a></strong>
-              </div>
-            </li>
-            <li class="rv afh">
-              <div class="rw">
-                <strong><a href="#contents" id="markdown-toc-contents">werwerwec543</a></strong>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="qg">
-          Dave really likes these nerds, no one knows why though.
-        </div>
-      </div>
+      <%= render 'topic', topics: Topic.all %>
 
 
       <div class="pz bpm">

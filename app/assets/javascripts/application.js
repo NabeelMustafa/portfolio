@@ -15,5 +15,6 @@
 //= require jquery_ujs
 //= require popper
 //= require cocoon
+//= require cable
 //= require gritter
 //= require_tree .
